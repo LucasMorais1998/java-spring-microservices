@@ -1,5 +1,6 @@
 package com.youtube.javaspringmicroservices.domain;
 
+import com.youtube.javaspringmicroservices.dtos.EventRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,4 +20,12 @@ public class Event {
     private String date;
     private String title;
     private String description;
+
+    public Event(EventRequestDTO eventRequest) {
+        this.date = eventRequest.date();
+        this.maxParticipants = eventRequest.maxParticipants();
+        this.registeredParticipants = eventRequest.registeredParticipants();
+        this.title = eventRequest.title();
+        this.description = eventRequest.description();
+    }
 }
