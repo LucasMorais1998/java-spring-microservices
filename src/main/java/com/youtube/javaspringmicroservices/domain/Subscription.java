@@ -17,4 +17,9 @@ public class Subscription {
     @ManyToOne
     private Event event;
     private String participantEmail;
+
+    public Subscription(Event event, String participantEmail) {
+        this.event = event;
+        this.participantEmail = participantEmail;
+    }
 }
