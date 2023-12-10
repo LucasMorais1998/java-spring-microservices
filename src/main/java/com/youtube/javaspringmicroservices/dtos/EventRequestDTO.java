@@ -1,4 +1,5 @@
 package com.youtube.javaspringmicroservices.dtos;
 
-public record EventRequestDTO(int maxParticipants, int registeredParticipants, String date, String title, String description) {
+public record EventRequestDTO(int maxParticipants, int registeredParticipants, String date, String title,
+                              String description) {
 }
